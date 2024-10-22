@@ -32,6 +32,20 @@ function runGame(userGuess) {
       numberOfGuesses++;
       results.textContent = `You guessed ${userGuess}, the number is higher`;
       userInput.value = "";
+    } else if (userGuess > computerGuess) {
+      numberOfGuesses++;
+      results.textContent = `You guessed ${userGuess}, the number is lower`;
+      userInput.value = "";
+    } else {
+      numberOfGuesses++;
+      results.textContent = `Winner! the correct number was ${userGuess}, you got it on guess number ${numberOfGuesses}`;
+      userInput.value = "";
+      computerGuess = Math.floor(Math.random() * 9) + 1;
+      numberOfGuesses = 0;
     }
+  } else {
+    results.textContent = `You lose, the correct answer was ${computerGuess}`;
+    computerGuess = Math.floor(Math.random() * 9) + 1;
+    numberOfGuesses = 0;
   }
 }
