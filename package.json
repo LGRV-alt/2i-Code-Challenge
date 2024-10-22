@@ -1,0 +1,14 @@
+{
+  "name": "2i-code-challenge",
+  "version": "1.0.0",
+  "description": "Code challege for 2i mock interview",
+  "main": "script.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.48.1",
+    "@types/node": "^22.7.8"
+  }
+}

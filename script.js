@@ -1,6 +1,6 @@
 // Number guessing game in the range of 1-10 with 5 guesses allowed to get the correct number
 
-// Grabbing the elements from the html page to be used with javascript
+//------Grab HTML Elements to be used with JavaScript ------------
 
 // User input box where the guess will be made
 const userInput = document.querySelector(".user-input");
@@ -11,6 +11,8 @@ const results = document.querySelector(".results");
 // Used to display the number of guess the player is on
 const guessNumber = document.querySelector("#guess-number");
 
+// ---------Sets inital Values -------------------
+
 // Creates a random number saved as the computers guess
 let computerGuess = Math.floor(Math.random() * 9) + 1;
 // Sets the initial value of 0 for the guesses made
@@ -19,6 +21,8 @@ let numberOfGuesses = 0;
 guessNumber.textContent = numberOfGuesses;
 // Sets the number of guesses allowed to be made before the game stops
 const allowedNumberOfGuesses = 5;
+
+// ----------Event Listener------------------------
 
 // This button starts the game function
 checkGuess.addEventListener("click", () => {
@@ -29,6 +33,8 @@ checkGuess.addEventListener("click", () => {
   //   Updates the guess number on the page
   guessNumber.textContent = numberOfGuesses;
 });
+
+// ---------------Functions----------------------
 
 // Function to validate user number input
 function checkValidNumber(number) {
