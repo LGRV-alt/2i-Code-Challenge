@@ -1,3 +1,5 @@
+// Number guessing game in the range of 1-10 with 5 guesses allowed to get the correct number
+
 // Grabbing the elements from the html page to be used with javascript
 
 // User input box where the guess will be made
@@ -14,7 +16,7 @@ let computerGuess = Math.floor(Math.random() * 9) + 1;
 // Sets the initial value of 0 for the guesses made
 let numberOfGuesses = 0;
 // Inserts into the HTML page the inital value for guesses made
-guessNumber.textContent = 0;
+guessNumber.textContent = numberOfGuesses;
 // Sets the number of guesses allowed to be made before the game stops
 const allowedNumberOfGuesses = 5;
 
