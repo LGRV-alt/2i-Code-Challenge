@@ -22,9 +22,18 @@ console.log(computerGuess);
 
 checkGuess.addEventListener("click", () => {
   let userGuess = userInput.value;
-  runGame(userGuess);
+  checkValidNumber(userGuess);
   guessNumber.textContent = numberOfGuesses;
 });
+
+function checkValidNumber(number) {
+  if (number < 1 || number > 10) {
+    results.textContent = "Number needs to be in range of 1-10";
+    userInput.value = "";
+  } else {
+    runGame(number);
+  }
+}
 
 function runGame(userGuess) {
   if (numberOfGuesses < allowedNumberOfGuesses) {
