@@ -74,7 +74,7 @@ function runGame(userGuess) {
       userInput.value = "";
     } else {
       numberOfGuesses++;
-      results.textContent = `Winner! the correct number was ${userGuess}, you got it on guess number ${numberOfGuesses}`;
+      results.textContent = `Winner! The correct number was ${userGuess}, you got it on guess number ${numberOfGuesses}`;
       resetGame();
     }
   } else {
