@@ -2,7 +2,6 @@ import { test, expect } from "@playwright/test";
 
 // Test block
 test.describe("Test the page inputs", () => {
-  // Before each test make sure the elements are on the page
   test.beforeEach(async ({ page }) => {
     await page.goto("http://127.0.0.1:5501/index.html");
     await expect(
@@ -13,6 +12,7 @@ test.describe("Test the page inputs", () => {
       page.getByRole("heading", { name: "Guess number 0 of" })
     ).toBeVisible();
   });
+
   test("Check results update on guess", async ({ page }) => {
     await page.getByRole("spinbutton").click();
     await page.getByRole("spinbutton").fill("5");
@@ -21,6 +21,7 @@ test.describe("Test the page inputs", () => {
       page.getByText("Enter a number between 1 - 10")
     ).not.toBeVisible();
   });
+
   test("Check number validation", async ({ page }) => {
     await page.getByRole("spinbutton").click();
     await page.getByRole("spinbutton").fill("11");
